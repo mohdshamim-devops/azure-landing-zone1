@@ -1,0 +1,40 @@
+# Terraform files
+
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfplan
+*.tfvars.json
+.terraform.lock.hcl
+
+# Terraform crash logs
+
+crash.log
+crash.*.log
+
+# Sensitive files
+
+*.pem
+*.key
+*.pfx
+*.crt
+
+# Azure CLI
+
+.azure/
+
+# VS Code
+
+.vscode/
+
+# OS files
+
+.DS_Store
+Thumbs.db
+
+# Temporary files
+
+*.tmp
+*.temp
+*.swp
+*~
