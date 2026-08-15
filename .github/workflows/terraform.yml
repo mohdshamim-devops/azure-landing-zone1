@@ -25,9 +25,9 @@ jobs:
       - name: Azure Login
         uses: azure/login@v2
         with:
-          client-id: ${{ 3326e9bf-7fc5-4fd7-9176-489b5934c768 }}
-          tenant-id: ${{ 4e86bdd1-0efb-47f9-a76d-517388c5e28f }}
-          subscription-id: ${{ c14887df-3ce2-44d2-adb8-4405e7e105d8 }}
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
