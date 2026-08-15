@@ -1,4 +1,3 @@
-
 name: Terraform Azure Deployment
 
 on:
@@ -19,7 +18,6 @@ jobs:
         working-directory: ./landing-zone
 
     steps:
-
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -27,13 +25,12 @@ jobs:
         uses: azure/login@v2
         with:
           creds: |
-             {
+            {
               "clientId": "3326e9bf-7fc5-4fd7-9176-489b5934c768",
-              "clientSecret": 66aa084b-ad31-4746-9e41-e9643aaafbd0",
+              "clientSecret": "66aa084b-ad31-4746-9e41-e9643aaafbd0",
               "subscriptionId": "c14887df-3ce2-44d2-adb8-4405e7e105d8",
               "tenantId": "4e86bdd1-0efb-47f9-a76d-517388c5e28f"
-              }
-            
+            }
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
