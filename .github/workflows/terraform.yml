@@ -1,4 +1,4 @@
-
+```yaml
 name: Terraform Azure Deployment
 
 on:
@@ -26,7 +26,14 @@ jobs:
       - name: Azure Login
         uses: azure/login@v2
         with:
-          creds: "fYC8Q~nJ6g3OgcYZqKAp0xihCi.6WpeZjAyFSa0n"
+          creds: |
+            {
+              "clientId": "3326e9bf-7fc5-4fd7-9176-489b5934c768",
+              "clientSecret": "fYC8Q~nJ6g3OgcYZqKAp0xihCi.6WpeZjAyFSa0n",
+              "subscriptionId": "4e86bdd1-0efb-47f9-a76d-517388c5e28f",
+              "tenantId": "c14887df-3ce2-44d2-adb8-4405e7e105d8"
+            }
+
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
 
