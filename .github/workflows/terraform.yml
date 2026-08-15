@@ -1,3 +1,4 @@
+```yaml
 name: Terraform Azure Deployment
 
 on:
@@ -6,7 +7,6 @@ on:
       - main
 
 permissions:
-  id-token: write
   contents: read
 
 jobs:
@@ -19,6 +19,7 @@ jobs:
         working-directory: ./landing-zone
 
     steps:
+
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -26,9 +27,9 @@ jobs:
         uses: azure/login@v2
         with:
           client-id: "3326e9bf-7fc5-4fd7-9176-489b5934c768"
+          client-secret: "fYC8Q~nJ6g3OgcYZqKAp0xihCi.6WpeZjAyFSa0n"
           tenant-id: "4e86bdd1-0efb-47f9-a76d-517388c5e28f"
           subscription-id: "c14887df-3ce2-44d2-adb8-4405e7e105d8"
-
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
 
@@ -43,3 +44,4 @@ jobs:
 
       - name: Terraform Apply
         run: terraform apply -auto-approve
+```
