@@ -3,4 +3,8 @@ resource_groups = {
         name     = "rg1"
         location = "East US"
     }
+     rg2 = {
+        name     = "rg2"
+        location = "East US"
+    }
 }
